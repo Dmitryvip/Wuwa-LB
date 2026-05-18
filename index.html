@@ -1,0 +1,74 @@
+<?php require 'templates/header.php' ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    <title>Wuwa-LB</title>
+</head>
+
+<body style="background-image: url(img/Airbrush-IMAGE-ENHANCER-1770281097412-1770281097412.jpg);
+            background-size: cover;
+            background-attachment: fixed;">
+
+    <div class="main">
+        <div class="container">
+
+            <div class="slider">
+                <div class="slides">
+                    <img src="img/wallpaperflare.com_wallpaper (2).jpg" class="slide active">
+                    <img src="img/galbrena-wuthering-waves-wuwa-4k-wallpaper-uhdpaper.com-567@5@l.jpg" class="slide">
+                    <img src="img/moryne-wuthering-waves-wuwa-4k-wallpaper-uhdpaper.com-244@5@n.jpg" class="slide">
+                    <img src="img/phrolova-wuwa-game-4k-wallpaper-uhdpaper.com-231@5@n.jpg" class="slide">
+                    <img src="img/wallpaperflare.com_wallpaper.jpg" class="slide">
+                    <img src="img/wuthering-waves-2023-6g-3840x2160.jpg" class="slide">
+                    <img src="img/wallpaperflare.com_wallpaper (1).jpg" class="slide">
+                    <img src="img/wuthering-waves-rover-wuthering-waves-chisa-wuthering-waves-screen-shot-schoolgirl-hd-wallpaper-ebc64c8d23910fb91574bbc97dbcdce0.jpg" class="slide">
+                </div>
+
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+            <h3>О нас</h3>
+            <p>Добро пожаловать на наш сайт, посвящённый захватывающей игре «Wuthering Waves»! Здесь вы найдёте актуальные гайды по некоторым персонажам этой замечательной игры. Мы собрали полезную информацию, которая поможет вам лучше понять механики игры, эффективно использовать способности персонажей и добиваться лучших результатов в «Wuthering Waves».
+                На страницах нашего сайта вы сможете ознакомиться с подробным описанием особенностей каждого персонажа, узнать об их сильных и слабых сторонах, а также о том, как максимально эффективно применять их в различных игровых ситуациях.</p>
+            <h3>Что такое «Wuthering Waves»?</h3>
+            <p>Wuthering Waves (релиз состоялся 22 мая 2024 года) — кроссплатформенная онлайн-игра в жанрах Action/RPG, разработанная и изданная китайской компанией Kuro Game. Главный герой — Ровер, потерявший память. После пробуждения он оказывается в постапокалиптическом мире, который захватили мутировавшие монстры. Ему предстоит разобраться в происходящем и попытаться спасти человечество от вымирания.
+            <p>Сюжет Wuthering Waves переносит игроков в футуристический постапокалиптический мир, где загадочная катастрофа, известная как «Плач», уничтожила большую часть человечества. На планете регулярно появляются разломы, из которых выходят хищные и кровожадные монстры. Лишь немногие люди смогли адаптироваться к новой угрозе и дать ей отпор. Задача выживших — уничтожить противника и восстановить цивилизацию.</p>
+            <p>Главный герой (Ровер) страдает от амнезии. Он пришёл в себя после долгого сна в уже охваченном хаосом мире. Его миссия — вместе с резонаторами (игровыми персонажами, которые подверглись мутации и обрели особые способности) сражаться с монстрами, исследовать мир, открывать новые технологии и выяснять причины катастрофы.</p>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function changeSlide(direction) {
+            slides[currentIndex].classList.remove('active');
+
+            currentIndex += direction;
+            if (currentIndex >= slides.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = slides.length - 1;
+
+            slides[currentIndex].classList.add('active');
+        }
+    </script>
+
+    <?php require 'loader.php'?>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+    <?php require 'templates/footer.php' ?>
